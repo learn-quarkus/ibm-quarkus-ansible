@@ -36,9 +36,9 @@
   register: git_sa_result
   until: git_sa_result is not failed
 
-- name: Print git_sa_result from the previous task
-  ansible.builtin.debug:
-    var: git_sa_result
+# - name: Print git_sa_result from the previous task
+#   ansible.builtin.debug:
+#     var: git_sa_result
 
 - name: Wait until openshift-gitops ArgoCD instance has been created
   kubernetes.core.k8s_info:

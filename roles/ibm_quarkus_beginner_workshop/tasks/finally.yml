@@ -14,9 +14,9 @@
   - console_info.resources[0].spec.plugins is defined
   - console_info.resources[0].spec.plugins | length > 0
 
-- name: Print console_info from the previous task
-  ansible.builtin.debug:
-    var: console_info
+# - name: Print console_info from the previous task
+#   ansible.builtin.debug:
+#     var: console_info
 
 - name: Set fact for combined plugins
   set_fact:

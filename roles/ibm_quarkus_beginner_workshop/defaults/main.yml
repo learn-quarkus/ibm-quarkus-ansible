@@ -1,7 +1,7 @@
 become_override: false
 ocp_username: opentlc-mgr
 silent: false
-guid: pew
+guid: ibmquarkus
 num_users: 1
 
 ocp4_workload_authentication_htpasswd_user_base: user
@@ -210,13 +210,12 @@ ibm_quarkus_beginner_workshop_webterminal_operator_catalog_snapshot_image_tag: "
 # Showroom
 # ------------------------------------------------
 ibm_quarkus_beginner_workshop_showroom_deployment_type: helm
-ibm_quarkus_beginner_workshop_showroom_content_git_repo: >-
-  https://github.com/app-connectivity-workshop/showroom.git
+ibm_quarkus_beginner_workshop_showroom_content_git_repo: https://github.com/learn-quarkus/ibm-quarkus-showroom.git
 ibm_quarkus_beginner_workshop_showroom_content_git_repo_ref: main
 ibm_quarkus_beginner_workshop_showroom_content_only: false
 ibm_quarkus_beginner_workshop_showroom_namespace: showroom
-ibm_quarkus_beginner_workshop_showroom_host_prefix: >-
-  showroom-{{ ibm_quarkus_beginner_workshop_showroom_namespace }}
+ibm_quarkus_beginner_workshop_showroom_host_prefix: ''
+  
 
 ibm_quarkus_beginner_workshop_openshift_api_internal: "https://172.30.0.1:443"
 

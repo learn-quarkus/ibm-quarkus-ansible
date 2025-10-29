@@ -7,9 +7,6 @@
       user_name: "{{ ibm_quarkus_beginner_workshop_user_prefix }}{{ n }}"
       user_password: "{{ ocp4_workload_authentication_htpasswd_user_password }}"
       openshift_cluster_console: "https://{{ r_console_route.resources[0].spec.host }}"
-      skupper_console_aws: >-
-        https://skupper-globex-skupper-{{ ibm_quarkus_beginner_workshop_user_prefix }}{{
-        n }}.{{ r_openshift_subdomain }}
       openshift_api_internal: "{{ ibm_quarkus_beginner_workshop_openshift_api_internal }}"
   loop: "{{ range(1, 1 + ibm_quarkus_beginner_workshop_user_count | int) | list }}"
   loop_control:
@@ -23,7 +20,5 @@
     ocp4_workload_showroom_deployment_type: "{{ ibm_quarkus_beginner_workshop_showroom_deployment_type }}"
     ocp4_workload_showroom_content_git_repo: "{{ ibm_quarkus_beginner_workshop_showroom_content_git_repo }}"
     ocp4_workload_showroom_content_git_repo_ref: "{{ ibm_quarkus_beginner_workshop_showroom_content_git_repo_ref }}"
-    ocp4_workload_showroom_content_only: "false"
+    ocp4_workload_showroom_content_only: "true"
     ocp4_workload_showroom_namespace: "{{ ibm_quarkus_beginner_workshop_showroom_namespace }}"
-    ocp4_workload_showroom_stacked_terminals_enable: "{{ ibm_quarkus_beginner_workshop_showroom_content_only }}"
-    ocp4_workload_showroom_stacked_terminals_display_name: "Terminals"
