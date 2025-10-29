@@ -1,0 +1,13 @@
+*.retry
+**/inventories/inventory
+**/inventories/inventory-*
+
+.vscode
+
+.ansible-lint
+
+playbooks/user-data.yaml
+playbooks/user-info.yaml
+
+**/__pycache__
+.DS_Store

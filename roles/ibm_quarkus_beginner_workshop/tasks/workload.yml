@@ -1,0 +1,19 @@
+---
+
+# - name: Install OpenShift Gitops
+#   ansible.builtin.include_tasks: openshift_gitops.yml
+
+# - name: Install Operators
+#   ansible.builtin.include_tasks: operators-system.yml
+
+- name: Install Argo Apps
+  ansible.builtin.include_tasks: argo-apps.yml
+
+# - name: Final workshop setup
+#   ansible.builtin.include_tasks: finally.yml
+
+# - name: Install Web Terminal operator
+#   ansible.builtin.include_tasks: webterminal.yml
+
+# - name: Install Showroom
+#   ansible.builtin.include_tasks: showroom.yml
