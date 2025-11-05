@@ -210,7 +210,7 @@ ibm_quarkus_beginner_workshop_webterminal_operator_catalog_snapshot_image_tag: "
 # Showroom
 # ------------------------------------------------
 ibm_quarkus_beginner_workshop_showroom_deployment_type: helm
-ibm_quarkus_beginner_workshop_showroom_content_git_repo: https://github.com/learn-quarkus/ibm-quarkus-showroom.git
+ibm_quarkus_beginner_workshop_showroom_content_git_repo: https://github.com/ryanj/ibq-showroom-m1.git
 ibm_quarkus_beginner_workshop_showroom_content_git_repo_ref: main
 ibm_quarkus_beginner_workshop_showroom_content_only: false
 ibm_quarkus_beginner_workshop_showroom_namespace: showroom
