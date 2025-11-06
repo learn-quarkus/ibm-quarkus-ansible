@@ -3,6 +3,9 @@
 #- name: Install OpenShift Gitops
 #  ansible.builtin.include_tasks: openshift_gitops.yml
 #
+- name: Install DevSpaces
+  ansible.builtin.include_tasks: install-devspaces.yaml
+
 - name: Install Operators
   ansible.builtin.include_tasks: operators-system.yml
 
