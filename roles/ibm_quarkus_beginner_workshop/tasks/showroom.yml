@@ -11,7 +11,7 @@
       openshift_subdomain: "{{ r_openshift_subdomain }}"
       # openshift_gitops_password: " {{ openshift_gitops_admin_password }} "
       # openshift_gitops_user: "admin"
-      DS_URL: "https://devspace.{{ r_openshift_subdomain }}"
+      DS_URL: "https://devspaces.{{ r_openshift_subdomain }}"
       ROUTE_SUBDOMAIN: "{{ r_openshift_subdomain }}"
       CONSOLE_URL: "https://{{ r_console_route.resources[0].spec.host }}"
       OPENSHIFT_USER_NAME: "{{ workshop_user }}"
