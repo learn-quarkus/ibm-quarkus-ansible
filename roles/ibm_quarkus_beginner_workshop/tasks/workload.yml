@@ -1,20 +1,20 @@
 ---
 
-#- name: Install OpenShift Gitops
-#  ansible.builtin.include_tasks: openshift_gitops.yml
-#
-- name: Install DevSpaces
-  ansible.builtin.include_tasks: install-devspaces.yaml
+- name: Install OpenShift Gitops
+  ansible.builtin.include_tasks: openshift_gitops.yml
+  when: ibm_quarkus_beginner_workshop_install_openshift_gitops | bool
 
 - name: Install Operators
   ansible.builtin.include_tasks: operators-system.yml
 
-#- name: Install Argo Apps
-#  ansible.builtin.include_tasks: argo-apps.yml
-#
-#- name: Install Web Terminal operator
-#  ansible.builtin.include_tasks: webterminal.yml
-#
+- name: Install Dev Spaces operator and CheCluster
+  ansible.builtin.include_tasks: devspaces_operator.yml
+
+
+- name: Install Argo Apps
+  ansible.builtin.include_tasks: argo-apps.yml
+  when: ibm_quarkus_beginner_workshop_install_app_of_apps | bool
+
 - name: Install Showroom
   ansible.builtin.include_tasks: showroom.yml
 

@@ -180,32 +180,6 @@ ibm_quarkus_beginner_workshop_gitops_repo: https://github.com/learn-quarkus/quar
 ibm_quarkus_beginner_workshop_gitops_repo_tag: main
 
 
-
-# ------------------------------------------------
-# Web terminal tooling image
-# ------------------------------------------------
-
-ibm_quarkus_beginner_workshop_webterminal_tooling_image: quay.io/cloud-architecture-workshop/web-terminal-tooling:skupper
-
-# ------------------------------------------------
-# Web Terminal Operator
-# ------------------------------------------------
-
-ibm_quarkus_beginner_workshop_webterminal_operator_channel: "fast"
-ibm_quarkus_beginner_workshop_webterminal_operator_automatic_install_plan_approval: true
-ibm_quarkus_beginner_workshop_webterminal_operator_starting_csv: ""
-ibm_quarkus_beginner_workshop_webterminal_operator_wait_for_deploy: true
-ibm_quarkus_beginner_workshop_webterminal_operator_name: web-terminal
-ibm_quarkus_beginner_workshop_webterminal_operator_csv_prefix: web-terminal
-ibm_quarkus_beginner_workshop_webterminal_operator_catalog_source: redhat-operators
-ibm_quarkus_beginner_workshop_webterminal_operator_deployment: web-terminal-controller
-ibm_quarkus_beginner_workshop_webterminal_operator_namespace: openshift-operators
-ibm_quarkus_beginner_workshop_webterminal_operator_use_catalog_snapshot: false
-ibm_quarkus_beginner_workshop_webterminal_operator_catalogsource_name: ""
-ibm_quarkus_beginner_workshop_webterminal_operator_catalogsource_namespace: openshift-operators
-ibm_quarkus_beginner_workshop_webterminal_operator_catalog_snapshot_image: ""
-ibm_quarkus_beginner_workshop_webterminal_operator_catalog_snapshot_image_tag: ""
-
 # ------------------------------------------------
 # Showroom
 # ------------------------------------------------
@@ -236,4 +210,8 @@ ibm_quarkus_beginner_workshop_argocd_local_cluster: local
 
 ibm_quarkus_beginner_workshop_app_of_apps_gitops_app: app-of-apps
 ibm_quarkus_beginner_workshop_app_of_apps_gitops_repo_path: app-of-apps
+
+ibm_quarkus_beginner_workshop_install_app_of_apps: false
+ibm_quarkus_beginner_workshop_install_openshift_gitops: false
+
 
