@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devspaces-kubeadmin
+  labels:
+    app.kubernetes.io/component: workspaces-namespace
+    app.kubernetes.io/part-of: che.eclipse.org
+  annotations:
+    che.eclipse.org/username: kubeadmin

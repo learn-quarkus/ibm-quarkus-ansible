@@ -1,26 +1,16 @@
 ---
 
-#- name: Set user info for showroom
-#  agnosticd_user_info:
-#    user: "{{ ibm_quarkus_beginner_workshop_user_prefix }}{{ n }}"
-#    data:
-#      user_name: "{{ ibm_quarkus_beginner_workshop_user_prefix }}{{ n }}"
-#      user_password: "{{ ocp4_workload_authentication_htpasswd_user_password }}"
-#      openshift_cluster_console: "https://{{ r_console_route.resources[0].spec.host }}"
-#      openshift_api_internal: "{{ ibm_quarkus_beginner_workshop_openshift_api_internal }}"
-#  loop: "{{ range(1, 1 + ibm_quarkus_beginner_workshop_user_count | int) | list }}"
-#  loop_control:
-#    loop_var: n
-#    label: "{{ ibm_quarkus_beginner_workshop_user_prefix }}{{ n }}"
-
-#- name: Set user info for showroom
-#  agnosticd_user_info:
-#    user: "user1"
-#    data:
-#      user_name: "user1"
-#      user_password: "openshift"
-#      openshift_cluster_console: "https://{{ r_console_route.resources[0].spec.host }}"
-#      openshift_api_internal: "{{ ibm_quarkus_beginner_workshop_openshift_api_internal }}"
+- name: Set user info for showroom
+  agnosticd_user_info:
+    user: "kubeadmin"
+    data:
+      user_name: "kubeadmin"
+      user_password: "{{ ocp4_workload_authentication_htpasswd_user_password }}"
+      openshift_cluster_console: "https://{{ r_console_route.resources[0].spec.host }}"
+      openshift_api_internal: "{{ ibm_quarkus_beginner_workshop_openshift_api_internal }}"
+      openshift_subdomain: "{{ r_openshift_subdomain }}"
+      openshift_gitops_password: " {{ openshift_gitops_admin_password }} "
+      openshift_gitops_user: "admin"
 
 - name: Install Showroom
   ansible.builtin.include_role:

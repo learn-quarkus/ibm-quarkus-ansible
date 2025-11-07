@@ -10,6 +10,6 @@
   register: app_of_apps_result
   until: app_of_apps_result is not failed
 
-- name: Print app_of_apps_result from the previous task
-  ansible.builtin.debug:
-    var: app_of_apps_result
+# - name: Print app_of_apps_result from the previous task
+#   ansible.builtin.debug:
+#     var: app_of_apps_result

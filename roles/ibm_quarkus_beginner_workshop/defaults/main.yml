@@ -4,6 +4,8 @@ silent: false
 guid: ibmquarkus
 num_users: 1
 
+ibm_quarkus_beginner_workshop_users: 1
+
 ocp4_workload_authentication_htpasswd_user_base: user
 ocp4_workload_authentication_htpasswd_user_count: 1
 ocp4_workload_authentication_htpasswd_user_password: openshift
@@ -182,31 +184,6 @@ ibm_quarkus_beginner_workshop_gitops_repo_tag: main
 
 
 # ------------------------------------------------
-# Web terminal tooling image
-# ------------------------------------------------
-
-ibm_quarkus_beginner_workshop_webterminal_tooling_image: quay.io/cloud-architecture-workshop/web-terminal-tooling:skupper
-
-# ------------------------------------------------
-# Web Terminal Operator
-# ------------------------------------------------
-
-ibm_quarkus_beginner_workshop_webterminal_operator_channel: "fast"
-ibm_quarkus_beginner_workshop_webterminal_operator_automatic_install_plan_approval: true
-ibm_quarkus_beginner_workshop_webterminal_operator_starting_csv: ""
-ibm_quarkus_beginner_workshop_webterminal_operator_wait_for_deploy: true
-ibm_quarkus_beginner_workshop_webterminal_operator_name: web-terminal
-ibm_quarkus_beginner_workshop_webterminal_operator_csv_prefix: web-terminal
-ibm_quarkus_beginner_workshop_webterminal_operator_catalog_source: redhat-operators
-ibm_quarkus_beginner_workshop_webterminal_operator_deployment: web-terminal-controller
-ibm_quarkus_beginner_workshop_webterminal_operator_namespace: openshift-operators
-ibm_quarkus_beginner_workshop_webterminal_operator_use_catalog_snapshot: false
-ibm_quarkus_beginner_workshop_webterminal_operator_catalogsource_name: ""
-ibm_quarkus_beginner_workshop_webterminal_operator_catalogsource_namespace: openshift-operators
-ibm_quarkus_beginner_workshop_webterminal_operator_catalog_snapshot_image: ""
-ibm_quarkus_beginner_workshop_webterminal_operator_catalog_snapshot_image_tag: ""
-
-# ------------------------------------------------
 # Showroom
 # ------------------------------------------------
 ibm_quarkus_beginner_workshop_showroom_deployment_type: helm
@@ -237,3 +214,76 @@ ibm_quarkus_beginner_workshop_argocd_local_cluster: local
 ibm_quarkus_beginner_workshop_app_of_apps_gitops_app: app-of-apps
 ibm_quarkus_beginner_workshop_app_of_apps_gitops_repo_path: app-of-apps
 
+
+# Flags to enable/disable certain components
+ibm_quarkus_beginner_workshop_install_openshift_gitops: true
+ibm_quarkus_beginner_workshop_install_app_of_apps: true
+
+
+
+
+
+# ------------------------------------------------
+# Devspaces Operator
+# ------------------------------------------------
+
+ibm_quarkus_beginner_workshop_devspaces_operator_channel: ""
+ibm_quarkus_beginner_workshop_devspaces_operator_starting_csv: ""
+ibm_quarkus_beginner_workshop_devspaces_operator_wait_for_deploy: true
+ibm_quarkus_beginner_workshop_devspaces_operator_name: devspaces
+ibm_quarkus_beginner_workshop_devspaces_operator_catalog_source: redhat-operators
+ibm_quarkus_beginner_workshop_devspaces_operator_deployment: devspaces-operator
+ibm_quarkus_beginner_workshop_devspaces_operator_namespace: openshift-operators
+ibm_quarkus_beginner_workshop_devspaces_operator_use_catalog_snapshot: false
+ibm_quarkus_beginner_workshop_devspaces_operator_catalogsource_name: redhat-operators-snapshot-amq-streams
+ibm_quarkus_beginner_workshop_devspaces_operator_catalog_snapshot_image: quay.io/gpte-devops-automation/olm_snapshot_redhat_catalog
+ibm_quarkus_beginner_workshop_devspaces_operator_catalog_snapshot_image_tag: "v4.6_2021_05_10"
+
+
+# ------------------------------------------------
+# Devspaces
+# ------------------------------------------------
+
+ibm_quarkus_beginner_workshop_devspaces_name: devspaces
+ibm_quarkus_beginner_workshop_devspaces_namespace: devspaces
+ibm_quarkus_beginner_workshop_devspaces_user_namespace_prefix: devspaces
+ibm_quarkus_beginner_workshop_devspaces_user_namespace: >-
+  "{{ ibm_quarkus_beginner_workshop_devspaces_user_namespace_prefix }}-<username>"
+ibm_quarkus_beginner_workshop_devspaces_template_name: che-code-workspace
+ibm_quarkus_beginner_workshop_devspaces_devworkspace_name: quarkus-beginners
+ibm_quarkus_beginner_workshop_devspaces_project_git: https://github.com/learn-quarkus/ibm-quarkus-workshop-m1-labs.git
+ibm_quarkus_beginner_workshop_devspaces_project_name: workshop-devspaces
+ibm_quarkus_beginner_workshop_devspaces_tools_image: quay.io/cloud-architecture-workshop/devspaces-image:0e90287
+ibm_quarkus_beginner_workshop_devspaces_project_git_branch: ocp-4.19
+
+# ------------------------------------------------
+# Web Terminal Operator
+# ------------------------------------------------
+
+ibm_quarkus_beginner_workshop_webterminal_operator_channel: "fast"
+ibm_quarkus_beginner_workshop_webterminal_operator_automatic_install_plan_approval: true
+ibm_quarkus_beginner_workshop_webterminal_operator_starting_csv: ""
+ibm_quarkus_beginner_workshop_webterminal_operator_wait_for_deploy: true
+ibm_quarkus_beginner_workshop_webterminal_operator_name: web-terminal
+ibm_quarkus_beginner_workshop_webterminal_operator_csv_prefix: web-terminal
+ibm_quarkus_beginner_workshop_webterminal_operator_catalog_source: redhat-operators
+ibm_quarkus_beginner_workshop_webterminal_operator_deployment: web-terminal-controller
+ibm_quarkus_beginner_workshop_webterminal_operator_namespace: openshift-operators
+ibm_quarkus_beginner_workshop_webterminal_operator_use_catalog_snapshot: false
+ibm_quarkus_beginner_workshop_webterminal_operator_catalogsource_name: ""
+ibm_quarkus_beginner_workshop_webterminal_operator_catalogsource_namespace: openshift-operators
+ibm_quarkus_beginner_workshop_webterminal_operator_catalog_snapshot_image: ""
+ibm_quarkus_beginner_workshop_webterminal_operator_catalog_snapshot_image_tag: ""
+
+# ------------------------------------------------
+# Web terminal tooling image
+# ------------------------------------------------
+
+ibm_quarkus_beginner_workshop_webterminal_tooling_image: quay.io/cloud-architecture-workshop/web-terminal-tooling:skupper-v2
+
+
+
+ocp4_workload_catalogsource_image: quay.io/gpte-devops-automation/olm_snapshot_redhat_catalog
+ocp4_workload_catalogsource_tag: v4.18_2025_07_25
+ocp4_workload_user_base: user
+ocp4_workload_user_count: 1
