@@ -215,3 +215,18 @@ ibm_quarkus_beginner_workshop_install_app_of_apps: false
 ibm_quarkus_beginner_workshop_install_openshift_gitops: false
 
 
+# ------------------------------------------------
+# devspaces Operator
+# ------------------------------------------------
+
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_channel: stable
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_automatic_install_plan_approval: true
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_starting_csv: ""
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_name: devspaces
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_namespace: openshift-operators
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_catalog: redhat-operators
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_use_catalog_snapshot: false
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_catalogsource_name: ""
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_catalogsource_namespace: openshift-operators
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_catalog_snapshot_image: ""
+ibm_quarkus_beginner_workshop_openshift_devspaces_operator_catalog_snapshot_image_tag: ""
