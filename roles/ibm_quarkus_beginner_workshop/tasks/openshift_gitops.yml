@@ -24,6 +24,7 @@
       "{{ ibm_quarkus_beginner_workshop_openshift_gitops_operator_catalog_snapshot_image_tag | default('') }}"
     install_operator_subscription_config:
       "{{ ibm_quarkus_beginner_workshop_openshift_gitops_operator_config }}"
+  when: ibm_quarkus_beginner_workshop_install_openshift_gitops | bool
 
 - name: Grant cluster-admin permissions to Gitops Service account
   when: ibm_quarkus_beginner_workshop_openshift_gitops_setup_cluster_admin | bool
