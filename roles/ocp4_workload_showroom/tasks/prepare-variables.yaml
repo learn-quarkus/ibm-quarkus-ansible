@@ -13,6 +13,11 @@
   ansible.builtin.set_fact:
     _showroom_user_data: "{{ _showroom_user_data | combine(lookup('agnosticd_user_data', '*')) }}"
 
+- name: -----------------------Display showroom user data-----------------------
+  ansible.builtin.debug:
+    msg: "{{ _showroom_user_data | to_json }}" 
+
+
 - name: Set fact _user_count
   when: _showroom_user_data.users is defined
   ansible.builtin.set_fact:

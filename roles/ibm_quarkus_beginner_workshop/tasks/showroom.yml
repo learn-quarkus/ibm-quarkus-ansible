@@ -25,5 +25,5 @@
     ocp4_workload_showroom_deployment_type: "{{ ibm_quarkus_beginner_workshop_showroom_deployment_type }}"
     ocp4_workload_showroom_content_git_repo: "{{ ibm_quarkus_beginner_workshop_showroom_content_git_repo }}"
     ocp4_workload_showroom_content_git_repo_ref: "{{ ibm_quarkus_beginner_workshop_showroom_content_git_repo_ref }}"
-    ocp4_workload_showroom_content_only: "true"
+    ocp4_workload_showroom_content_only: true
     ocp4_workload_showroom_namespace: "{{ ibm_quarkus_beginner_workshop_showroom_namespace }}"
