@@ -9,6 +9,9 @@
 - name: Install Showroom
   ansible.builtin.include_tasks: showroom.yml
 
+- name: Install ArgoCD Apps
+  ansible.builtin.include_tasks: argo-apps.yml
+
 - name: Final workshop setup
   ansible.builtin.include_tasks: finally.yml
 
