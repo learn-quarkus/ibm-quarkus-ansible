@@ -3,8 +3,8 @@
 - name: Install OpenShift Gitops
   ansible.builtin.include_tasks: openshift_gitops.yml
 
-# - name: Install Dev Spaces operator and CheCluster
-#   ansible.builtin.include_tasks: devspaces_operator.yml
+- name: Install Dev Spaces operator and CheCluster
+  ansible.builtin.include_tasks: devspaces_operator.yml
 
 - name: Install Showroom
   ansible.builtin.include_tasks: showroom.yml
