@@ -17,6 +17,11 @@
        | json_query("spec.identityProviders[?type=='HTPasswd']|[0].htpasswd.fileData.name")
       }}
 
+- name: Print ocp4_workload_authentication_htpasswd_secret
+  ansible.builtin.debug:
+    msg: "ocp4_workload_authentication_htpasswd_secret: {{ ocp4_workload_authentication_htpasswd_secret }}"
+
+
 - name: pre_workload tasks complete
   when: not silent | bool
   ansible.builtin.debug:
