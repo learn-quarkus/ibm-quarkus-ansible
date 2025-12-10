@@ -2,6 +2,15 @@
 # Implement your Post Workload deployment tasks here
 # --------------------------------------------------
 
+# Remove deployer-notification
+- name: Remove consolenotifications deployer-notification
+  kubernetes.core.k8s:
+    state: absent
+    api_version: v1
+    kind: ConsoleNotification
+    namespace: openshift-console
+    name: deployer-notification
+
 # Leave these as the last tasks in the playbook
 # ---------------------------------------------
 
