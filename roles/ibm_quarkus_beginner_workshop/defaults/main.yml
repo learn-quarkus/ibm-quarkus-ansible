@@ -18,17 +18,16 @@ common_admin_password: "{{ (guid[:5] | hash('md5') | int(base=16) | b64encode)[:
 ocp4_workload_authentication_idm_type: htpasswd
 ocp4_workload_authentication_admin_user: admin
 ocp4_workload_authentication_htpasswd_admin_password: "{{ common_admin_password }}"
-ocp4_workload_authentication_htpasswd_user_base: user
-ocp4_workload_authentication_htpasswd_user_password: openshift
-ocp4_workload_authentication_htpasswd_user_count: "{{ (num_users | default('1')) | int }}"
+
+
 ocp4_workload_authentication_remove_kubeadmin: true
 
 
 
-
-ibm_quarkus_beginner_workshop_user_count: "{{ ocp4_workload_authentication_htpasswd_user_count }}"
+ibm_quarkus_beginner_workshop_user_base: user
+ibm_quarkus_beginner_workshop_user_count: "{{ (num_users | default('1')) | int }}"
 ibm_quarkus_beginner_workshop_user_prefix: "{{ ocp4_workload_authentication_htpasswd_user_base }}"
-
+ibm_quarkus_beginner_workshop_htpasswd_user_password: openshift
 
 
 # ------------------------------------------------

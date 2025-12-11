@@ -3,7 +3,7 @@
   agnosticd_user_info:
     data:
       user_name: "kubeadmin"      
-      user_password: "{{ ocp4_workload_authentication_htpasswd_user_password }}"
+      user_password: "{{ ibm_quarkus_beginner_workshop_htpasswd_user_password }}"
       openshift_cluster_console: "https://{{ r_console_route.resources[0].spec.host }}"
       openshift_api_internal: "{{ ibm_quarkus_beginner_workshop_openshift_api_internal }}"
       openshift_subdomain: "{{ r_openshift_subdomain }}"

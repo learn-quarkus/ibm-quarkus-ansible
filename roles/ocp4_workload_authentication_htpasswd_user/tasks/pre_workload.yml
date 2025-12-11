@@ -21,7 +21,6 @@
   ansible.builtin.debug:
     msg: "ocp4_workload_authentication_htpasswd_secret: {{ ocp4_workload_authentication_htpasswd_secret }}"
 
-
 - name: pre_workload tasks complete
   when: not silent | bool
   ansible.builtin.debug:
