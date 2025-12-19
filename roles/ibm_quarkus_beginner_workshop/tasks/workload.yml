@@ -15,6 +15,9 @@
 - name: Install Showroom
   ansible.builtin.include_tasks: showroom.yml
 
+- name: Install Username Distribution
+  ansible.builtin.include_tasks: username-distribution.yml
+
 - name: Install ArgoCD Apps
   ansible.builtin.include_tasks: argo-apps.yml
 
